@@ -1,7 +1,7 @@
 <template>
   <transition name="fade">
     <div 
-      v-show="isShow"
+      v-if="isShow"
       class="wrapper">
       <vue-simple-spinner 
         :size="size" 
