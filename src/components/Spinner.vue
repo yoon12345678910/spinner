@@ -3,19 +3,17 @@
     <div 
       v-show="isShow"
       class="wrapper">
-      <template>
-        <vue-simple-spinner 
-          :size="size" 
-          :line-size="5"
-          :line-bg-color="'#eee'"
-          :line-fg-color="'#2196f3'"
-          :speed="1.2"
-          :message="message"
-          :font-size="_calcfontSize"
-          :text-fg-color="'#e3e5e8'"
-          class="spinner" />
-        <div class="overlay"></div>
-      </template>
+      <vue-simple-spinner 
+        :size="size" 
+        :line-size="5"
+        :line-bg-color="'#eee'"
+        :line-fg-color="'#2196f3'"
+        :speed="1.2"
+        :message="message"
+        :font-size="_calcfontSize"
+        :text-fg-color="'#e3e5e8'"
+        class="spinner" />
+      <div class="overlay"></div>
     </div>
   </transition>
 </template>
