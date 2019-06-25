@@ -1,28 +1,48 @@
 <template>
-  <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
+  <div>
+    <button @click="onLoading" type="button">
+      LOADING ON
+    </button>
+    <Spinner v-if="isLoading" />
   </div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+import Spinner from './components/Spinner'
 
 export default {
   name: 'app',
   components: {
-    HelloWorld
+    Spinner
+  },
+  data: function () {
+    return {
+      isLoading: false
+    }
+  },
+  methods: {
+    onLoading: function () {
+      this.isLoading = true;
+    },
+    offLoading: function () {
+      this.isLoading = false;
+    }
+  },
+  mounted () {
+    document.body.addEventListener('keyup', e => {
+      // ESC
+      if (e.keyCode === 27) {
+        this.offLoading();
+      }
+    });
   }
 }
 </script>
 
-<style>
-#app {
-  font-family: 'Avenir', Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
-}
+<style scoped>
+  hr {
+    border: 0;
+    border-top: 1px solid #ddd;
+    margin: 1rem 0;
+  }
 </style>
