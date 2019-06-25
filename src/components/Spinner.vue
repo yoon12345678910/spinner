@@ -31,7 +31,7 @@
     props: {
       size: {
         type: [Number, String],
-        default: 80
+        default: 70
       },
       message: {
         type: String,
