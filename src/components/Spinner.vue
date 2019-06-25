@@ -21,6 +21,7 @@
 </template>
 
 <script>
+  // https://github.com/dzwillia/vue-simple-spinner
   import vueSimpleSpinner from 'vue-simple-spinner'
 
   export default {
